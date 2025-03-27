@@ -1,0 +1,46 @@
+nav{
+    background-color: #7DEEF6
+    
+}
+
+.shapka {
+    justify-content: center;
+    margin-left: 1100px;
+    display: flex;
+}
+
+.btn-primary {
+    margin-right: 5px;
+    width: 150px;
+    height: 50px;
+    border-radius:20px;
+}
+
+.card-group{
+    margin-top: 0%;
+}
+
+.tradingview-widget-container{
+    display: flex;
+    justify-content: center;
+   margin-left: 100px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.info-btc{
+   text-align: center;
+   padding-bottom: 20px;
+}
+
+.container-btc{
+    background-color: rgb(120, 120, 216);
+    margin: 0;
+}
+
+.tradingview-widget-containera{
+    height: 40px;
+}
