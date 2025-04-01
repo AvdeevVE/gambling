@@ -28,7 +28,7 @@ nav{
 h1{
     display: flex;
     justify-content: center;
-   
+    color: azure;
 }
 
 .info-btc{
@@ -43,4 +43,19 @@ h1{
 
 .tradingview-widget-containera{
     height: 40px;
+}
+
+.ba-news{
+    background-color: #7564c0;
+    text-align: center;
+    color: azure;}
+.container-news{
+    display: flex;
+    justify-content: center;
+   
+   margin-top: 0px;
+}
+
+.fcont{
+    background-color:#7DEEF6;
 }
