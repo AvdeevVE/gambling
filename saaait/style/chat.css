@@ -1,0 +1,38 @@
+nav{
+    background-color: #7DEEF6
+    
+}
+
+.shapka {
+    justify-content: center;
+    margin-left: 1100px;
+    display: flex;
+}
+
+.btn-primary {
+    margin-right: 5px;
+    width: 150px;
+    height: 50px;
+    border-radius:20px;
+}
+
+.container{
+    background-color: #D9D9D9;
+    width: auto;
+    height: 1500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.form-floating{
+    position: absolute;
+    margin-bottom: 20px;
+}
+
+.btn-outline-primary{
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}

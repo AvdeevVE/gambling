@@ -1,0 +1,18 @@
+nav{
+    background-color: #7DEEF6
+    
+}
+
+.shapka {
+    justify-content: center;
+    margin-left: 1100px;
+    display: flex;
+}
+
+.btn-primary {
+    margin-right: 5px;
+    width: 150px;
+    height: 50px;
+    border-radius:20px;
+}
+
