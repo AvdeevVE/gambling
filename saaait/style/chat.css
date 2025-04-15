@@ -1,3 +1,7 @@
+#{
+    background-color: blue;
+}
+
 nav{
     background-color: #7DEEF6
     
@@ -17,13 +21,14 @@ nav{
 }
 
 .container{
-    background-color: #D9D9D9;
+    background-color: #c5c5c5;
     width: auto;
     height: 1500px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-top: 40px;
 }
 
 .form-floating{
@@ -36,3 +41,5 @@ nav{
     right: 10px;
     top: 25px;
 }
+
+
