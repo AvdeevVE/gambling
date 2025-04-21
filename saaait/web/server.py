@@ -16,26 +16,31 @@ def get_course():
             "name": "Мега арбетраш",
             "description": "Мамкин арбетрашник йоу",
             "DCF": "08.04.2025",
-            "photo": "https://i0.wp.com/ru.facemarket.org/wp-content/uploads/2024/03/macan1.png?fit=826%2C1024&ssl=1"
+            "photo": "https://i0.wp.com/ru.facemarket.org/wp-content/uploads/2024/03/macan1.png?fit=826%2C1024&ssl=1",
+            "buy": "купить"
         },
         {
             "name": "Сева трейд",
             "description": "Инфоцыганский курс Севы Типова",
             "price": 200,
-            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTozQg9TArct9e1aFafp-zQR8N2i7NXKs2vyg&s"
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTozQg9TArct9e1aFafp-zQR8N2i7NXKs2vyg&s",
+            "buy": "купить"
         },
         {
             "name": "Массаж простоты",
             "description": "Простой массаж для мужчин",
             "DCF": "22.05.2023",
-            "photo": "https://img-webcalypt.ru/uploads/admin/images/meme-templates/Sbj26C3isBa1TKxZBwTbLNqI6gb9pBhi.jpg"
+            "photo": "https://img-webcalypt.ru/uploads/admin/images/meme-templates/Sbj26C3isBa1TKxZBwTbLNqI6gb9pBhi.jpg",
+            "buy": "купить"
         },
         {
             "name": "Владмен Авдекарян",
             "description": "Научись быть мужыком",
             "DCF": "22.05.2023",
-            "photo": "https://www.rubaltic.ru/upload/iblock/507/50754a7983e10231bc1ad81aae8c6e91.jpg"
+            "photo": "https://www.rubaltic.ru/upload/iblock/507/50754a7983e10231bc1ad81aae8c6e91.jpg",
+            "buy": "купить"
         },
+        
     ]
     return Response(json.dumps(course), content_type="application/json")
 

@@ -1,0 +1,41 @@
+body{
+    background-color:darkblue;
+}
+
+nav{
+    background-color: #7DEEF6
+    
+}
+
+.shapka {
+    justify-content: center;
+    margin-left: 1100px;
+    display: flex;
+}
+
+.btn-primary {
+    margin-right: 5px;
+    width: 150px;
+    height: 50px;
+}
+
+.vhod{
+    border-radius: 20px;
+   width: 1000px;
+   margin-top: 100px;
+   background-color:blue;
+   height: 300px;
+   align-items: center;
+   justify-content: center;
+   margin-left: 500px;
+}
+
+
+.form-floating{
+    width: 500px;
+    margin-left: 250px;
+}
+
+.byt{
+    margin-top: 50px;
+}
