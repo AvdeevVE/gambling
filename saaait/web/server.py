@@ -1,6 +1,12 @@
 from flask import Flask, Response
 from flask_cors import CORS
 import json
+from flask import Flask, Response, jsonify, request
+from sqlalchemy import create_engine, text, bindparam
+
+
+connection_string = "mysql+pymysql://ava:1234@192.168.50.129:3306/test"
+engine = create_engine(connection_string, echo=True)
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -9,40 +15,17 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 def index():
     return "Hello world"
 
+
+
 @app.route("/api/course/all")
-def get_course():
-    course = [
-        {
-            "name": "Мега арбетраш",
-            "description": "Мамкин арбетрашник йоу",
-            "DCF": "08.04.2025",
-            "photo": "https://i0.wp.com/ru.facemarket.org/wp-content/uploads/2024/03/macan1.png?fit=826%2C1024&ssl=1",
-            "buy": "купить"
-        },
-        {
-            "name": "Сева трейд",
-            "description": "Инфоцыганский курс Севы Типова",
-            "price": 200,
-            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTozQg9TArct9e1aFafp-zQR8N2i7NXKs2vyg&s",
-            "buy": "купить"
-        },
-        {
-            "name": "Массаж простоты",
-            "description": "Простой массаж для мужчин",
-            "DCF": "22.05.2023",
-            "photo": "https://img-webcalypt.ru/uploads/admin/images/meme-templates/Sbj26C3isBa1TKxZBwTbLNqI6gb9pBhi.jpg",
-            "buy": "купить"
-        },
-        {
-            "name": "Владмен Авдекарян",
-            "description": "Научись быть мужыком",
-            "DCF": "22.05.2023",
-            "photo": "https://www.rubaltic.ru/upload/iblock/507/50754a7983e10231bc1ad81aae8c6e91.jpg",
-            "buy": "купить"
-        },
-        
-    ]
-    return Response(json.dumps(course), content_type="application/json")
+def get_products():
+    with engine.connect() as connection:
+        raw_result = connection.execute(text("SELECT * FROM Course"))
+        result = []
+        for r in raw_result.all():
+            result.append(r._asdict())
+        return jsonify(result)
+    return Response(jsonify({"status": "500", "message": "Database is down!"}), status=500)
 
 def main():
     app.run("localhost", 8000, True)

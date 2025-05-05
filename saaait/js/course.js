@@ -17,24 +17,24 @@ async function render_course() {
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">{ГОРОД}</h5>
-        <p class="card-text">{ПОГОДА}</p>
+        <h5 class="card-title">{НАЗВАНИЕ}</h5>
+        <p class="card-text">{ОПИСАНИЕ}</p>
         <p class="card-text"><small class="text-body-secondary">{ПОСЛЕДНЕЕОБНОВЛЕНИЕ}</small></p>
-        <a href="https://t.me/+K8iFgPuK7wdmNzBi"><button class="buy">{price}</button></a>
       </div>
     </div>
   </div>
 </div>`;
 
+
+
     let course = await get_course();
     let container = document.getElementById("course");
     course.forEach(element => {
         let course = template
-            .replace("{ГОРОД}", element.name)
-            .replace("{ПОГОДА}", element.description)
+            .replace("{НАЗВАНИЕ}", element.name)
+            .replace("{ОПИСАНИЕ}", element.description)
             .replace("{КАРТИНКА}", element.photo)
             .replace("{ПОСЛЕДНЕЕОБНОВЛЕНИЕ}", element.DCF)
-            .replace("{price}", element.buy)
         container.innerHTML += course;
     });
 }
